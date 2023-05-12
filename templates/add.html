@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class="jumbotron upperContainer">
+    <h2>Please fullfill the blank areas</h2>
+    <div class="container containerContent">
+        <form action="" method="POST">
+            {{form.hidden_tag()}}
+
+            <div class="mb-3">
+                {{form.name.label(class_='form-label')}}{{form.name(class_='form-control')}}
+
+            </div>
+
+            <div class="mb-3">
+                {{form.surname.label(class_='form-label')}}{{form.surname(class_='form-control')}}
+            </div>
+
+            <div class="mb-3">
+                {{form.school_number.label(class_='form-label')}}{{form.school_number(class_='form-control')}}
+            </div>
+
+            <div class="mb-3">
+                {{form.add_teacher.label(class_='form-label')}}{{form.add_teacher(class_='form-select')}}
+            </div>
+
+            <div class="mb-3">
+                {{form.add_branch.label(class_='form-label')}}{{form.add_branch(class_='form-select')}}
+            </div>
+
+            <div class="mb-3">
+                {{form.img_url.label(class_='form-label')}}{{form.img_url(class_='form-control')}}
+            </div>
+
+            <div class="mb-2">
+                {{form.submit(class_='btn btn-success px-3')}}
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

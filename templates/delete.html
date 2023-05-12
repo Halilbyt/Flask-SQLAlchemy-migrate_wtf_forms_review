@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="jumbotron upperContainer">
+    <h2>Please enter id number of the student that you goingto delete</h2>
+    <div class="container containerContent">
+        <form action="" method="POST">
+            {{form.hidden_tag()}}
+
+            <div class="mb-3">
+                {{form.id.label(class_='form-label')}}{{form.id(class_='form-control')}}
+
+            </div>
+
+
+            <div class="mb-2">
+                {{form.submit(class_='btn btn-success px-3')}}
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

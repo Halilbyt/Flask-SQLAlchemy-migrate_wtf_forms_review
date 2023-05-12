@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="jumbotron upperContainer">
+    <h1>Welcome to Student Record Application</h1>
+    <div class="container containerContent">
+        <img src="{{url_for('static',filename='students.png')}}" alt="no_img" class="imageContent">
+        <p class="textContent">This project created by Flask and for the data adding/deleting we use SQLite Database.
+            The student object have name, surname, school number, guidence teacher and branch. If you want add or remove
+            data from the current database use navbar links.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

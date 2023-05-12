@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class="upperContainer">
+    <h1 style="margin:0 auto">Student List</h1>
+    <hr style="width:100%;border:1px solid rgb(192, 180, 180)">
+    <div class="container containerContent">
+        {% if students|length == 0 %} <h3 class="text-center p-3">There is no recored Student list please firstly add
+            couple
+            of students</h3>
+        {% endif %}
+        <ul class="list-group">
+            {% for std in students %}
+            <li class="list-group-item list-group-item-light">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src={{std.img_url}} alt="No Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Student Id = {{std.id}}</h5>
+                        <h6>Name & Surname: {{std.name}} {{std.surname}}</h6>
+                        <h6>Branch: {{std.branch.branch_name}}</h6>
+                        <h6>Guidence Teacher: {{std.teacher.name_surname}}</h6>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <hr style="width:100%;border:1px solid rgb(192, 180, 180)">
+</div>
+
+
+{% endblock %}

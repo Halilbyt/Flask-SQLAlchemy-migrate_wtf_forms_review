@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron upperContainer">
+    <h2>Ops there are some error</h2>
+    <div class="container containerContent">
+        {% if error|string() =="Class 'builtins.NoneType' is not mapped" %}
+        <p class="p-3 text-left">The Student that you entered the id not exist!</p>
+        {% else %}
+        <p>{{error}}</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
